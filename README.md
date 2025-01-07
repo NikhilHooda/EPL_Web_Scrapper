@@ -1,57 +1,56 @@
-# EPL Match Outcome Prediction
+# Retirement Planning App
 
-This repository contains a comprehensive project that scrapes English Premier League (EPL) match data and uses it to build a machine learning (ML) model to predict match outcomes. The ML model leverages a Random Forest Classifier to predict results based on various match features.
+## Overview
+The Retirement Planning App is a React and TypeScript application designed to help couples plan their retirement. It allows users to input personal information, current investments, future investments, and desired retirement income. The app provides visualizations and summaries to assist in making informed retirement decisions.
 
-## Project Structure
+## Features
+- User input forms for personal information, current and future investments, and retirement income.
+- Redux for state management to handle user inputs and application state.
+- Charts generated using React Highcharts to visualize investment growth and retirement income projections.
+- Summary component to display key retirement planning metrics.
 
-The repository is organized as follows:
+## Getting Started
 
-- **`EPL_Web_Scrapper.ipynb`**: A Jupyter Notebook that scrapes EPL match data from a reliable source, processes it, and saves it in a usable format for machine learning.
-- **`soccer_prediction_model.ipynb`**: A Jupyter Notebook that:
-  - Loads and preprocesses the scraped data.
-  - Explores and visualizes key features.
-  - Builds, trains, and evaluates a Random Forest Classifier to predict match outcomes.
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm (Node package manager)
 
-## Features of the Project
+### Installation
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```
+   cd retirement-planning-app
+   ```
+3. Install the dependencies:
+   ```
+   npm install
+   ```
 
-- **Web Scraping**: Automatically collects data for multiple seasons from EPL match records, including team statistics, match results, and other relevant features.
-- **Data Preprocessing**: Cleans and processes raw data to make it suitable for ML, including feature engineering and handling missing values.
-- **Random Forest Classifier**: Implements a robust and interpretable ML model to predict outcomes such as Home Win, Draw, or Away Win.
-- **Evaluation Metrics**: Assesses the model's performance using metrics like accuracy, precision, recall, and F1-score.
-
-## Requirements
-
-To run the project, you need the following dependencies:
-
-- Python 3.8+
-- Jupyter Notebook/ Google Colab
-- Libraries: `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`, `requests`, `beautifulsoup4`
-
-Install the required libraries using:
-
-```bash
-pip install -r requirements.txt
+### Running the Application
+To start the development server, run:
 ```
-
-## How to Use
-
-1. Clone this repository:
-
-```bash
-git clone https://github.com/your-username/epl-match-prediction.git
-cd epl-match-prediction
+npm start
 ```
+The application will be available at `http://localhost:3000`.
 
-2. Run the web scraper:
+### Building for Production
+To create a production build, run:
+```
+npm run build
+```
+This will generate a `build` directory with optimized files for deployment.
 
-   Open `EPL_Web_Scrapper.ipynb` in Jupyter Notebook and execute the cells to scrape EPL data.
+## Usage
+- Fill out the personal information form with names, current age, and retirement ages.
+- Enter details about current investments (RRSP, TFSA, etc.) and future investments.
+- Specify desired retirement income, including sources like CPP and OAS.
+- View charts and summaries to analyze retirement planning results.
 
-3. Train the prediction model:
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
 
-   Open `soccer_prediction_model.ipynb` in Jupyter Notebook and execute the cells to preprocess the data, train the model, and evaluate its performance.
-
-4. (Optional) Use the model to predict outcomes for new match data.
-
-## Results
-
-The Random Forest model achieves a performance score of approximately 67% accuracy on the test set. Detailed evaluation metrics and visualizations are available in the `soccer_prediction_model.ipynb` notebook.
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.

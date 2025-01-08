@@ -1,4 +1,4 @@
-# ReadMe
+# README
 
 This project combines a web scraper and a machine learning model to analyze and predict outcomes in the English Premier League (EPL). The scraper collects detailed match and player statistics from [FBref](https://fbref.com), while the prediction model leverages this data for predictive analytics.
 

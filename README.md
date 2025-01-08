@@ -1,56 +1,57 @@
-# Retirement Planning App
+# README
+
+This project combines a web scraper and a machine learning model to analyze and predict outcomes in the English Premier League (EPL). The scraper collects detailed match and player statistics from [FBref](https://fbref.com), while the prediction model leverages this data for predictive analytics.
 
 ## Overview
-The Retirement Planning App is a React and TypeScript application designed to help couples plan their retirement. It allows users to input personal information, current investments, future investments, and desired retirement income. The app provides visualizations and summaries to assist in making informed retirement decisions.
+This project automates the data collection process from FBref and uses that data to build a machine learning model for soccer analytics. The scraping script collects match statistics such as goals, shots, fouls, and other key metrics. The prediction model processes this data to forecast match outcomes or other insights.
 
 ## Features
-- User input forms for personal information, current and future investments, and retirement income.
-- Redux for state management to handle user inputs and application state.
-- Charts generated using React Highcharts to visualize investment growth and retirement income projections.
-- Summary component to display key retirement planning metrics.
+- **Data Scraping**: Extract match statistics, shooting details, and other performance metrics for multiple seasons (2021-2024).
+- **User-Agent Rotation**: Prevents request blocking by rotating user-agent headers.
+- **Data Cleaning and Merging**: Combines data from different sources into a unified CSV for analysis.
+- **Predictive Analytics**: Uses historical data to build a machine learning model for predicting match outcomes.
 
-## Getting Started
-
+## Setup
 ### Prerequisites
-- Node.js (version 14 or higher)
-- npm (Node package manager)
+- Python 3.8 or above
+- Libraries:
+  - `requests`
+  - `pandas`
+  - `BeautifulSoup` (from `bs4`)
+  - `time`
+  - Machine learning libraries (specified in the Jupyter notebook)
 
 ### Installation
 1. Clone the repository:
-   ```
+   ```bash
    git clone <repository-url>
+   cd <repository-folder>
    ```
-2. Navigate to the project directory:
+2. Install the required Python libraries:
+   ```bash
+   pip install -r requirements.txt
    ```
-   cd retirement-planning-app
-   ```
-3. Install the dependencies:
-   ```
-   npm install
-   ```
-
-### Running the Application
-To start the development server, run:
-```
-npm start
-```
-The application will be available at `http://localhost:3000`.
-
-### Building for Production
-To create a production build, run:
-```
-npm run build
-```
-This will generate a `build` directory with optimized files for deployment.
+   *(Ensure the `requirements.txt` file lists dependencies, such as `requests`, `pandas`, etc.)*
 
 ## Usage
-- Fill out the personal information form with names, current age, and retirement ages.
-- Enter details about current investments (RRSP, TFSA, etc.) and future investments.
-- Specify desired retirement income, including sources like CPP and OAS.
-- View charts and summaries to analyze retirement planning results.
+### Web Scraper
+Run the Python script to scrape EPL match data:
+```bash
+python epl_web_scrapper.py
+```
+This will save the data to a CSV file (`2021-24matches.csv`).
 
-## Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
+### Prediction Model
+Open the Jupyter notebook `soccer_prediction_model.ipynb` to preprocess the data, train models, and evaluate predictions.
+
+## Files
+- **`epl_web_scrapper.py`**: Scrapes EPL data from FBref for multiple seasons.
+- **`soccer_prediction_model.ipynb`**: Processes the scraped data and builds predictive models.
+
+## Future Work
+- Enhance scraping functionality for more detailed statistics.
+- Implement additional predictive models.
+- Automate the pipeline from scraping to model deployment.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.

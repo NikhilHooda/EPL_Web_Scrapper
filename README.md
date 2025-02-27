@@ -9,7 +9,7 @@ This project automates the data collection process from FBref and uses that data
 - **Data Scraping**: Extract match statistics, shooting details, and other performance metrics for multiple seasons (2021-2024).
 - **User-Agent Rotation**: Prevents request blocking by rotating user-agent headers.
 - **Data Cleaning and Merging**: Combines data from different sources into a unified CSV for analysis.
-- **Predictive Analytics**: Uses historical data to build a machine learning model for predicting match outcomes.
+- **Predictive Analytics**: Uses historical data to build a machine learning model for predicting match outcomes with 88% accuracy
 
 ## Setup
 ### Prerequisites

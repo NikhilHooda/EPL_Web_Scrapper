@@ -3,7 +3,7 @@
 This project combines a web scraper and a machine learning model to analyze and predict outcomes in the English Premier League (EPL). The scraper collects detailed match and player statistics from [FBref](https://fbref.com), while the prediction model leverages this data for predictive analytics.
 
 ## Overview
-This project automates the data collection process from FBref and uses that data to build a machine learning model for soccer analytics. The scraping script collects match statistics such as goals, shots, fouls, and other key metrics. The prediction model processes this data to forecast match outcomes or other insights.
+This project automates the data collection process from FBref and uses that data to build a machine learning model for soccer analytics. The scraping script collects match statistics such as goals, shots, fouls, and other key metrics. The prediction model processes this data to forecast match outcomes or other insights with 88% accuracy
 
 ## Features
 - **Data Scraping**: Extract match statistics, shooting details, and other performance metrics for multiple seasons (2021-2024).
